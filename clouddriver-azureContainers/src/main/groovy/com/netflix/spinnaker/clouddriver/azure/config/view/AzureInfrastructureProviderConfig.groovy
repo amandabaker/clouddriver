@@ -91,6 +91,8 @@ class AzureInfrastructureProviderConfig {
         if (!scheduledAccounts.contains(creds.accountName)) {
           def newlyAddedAgents = []
 
+          // TODO: this will likely require only caching the master and the proxy if we have one. So maybea clusterCachingAgent would end up used here?
+          
           // //newlyAddedAgents << new AzureLoadBalancerCachingAgent(azureCloudProvider, creds.accountName, creds.credentials, region.name, objectMapper, registry)
           // newlyAddedAgents << new AzureSecurityGroupCachingAgent(azureCloudProvider, creds.accountName, creds.credentials, region.name, objectMapper, registry)
           // newlyAddedAgents << new AzureNetworkCachingAgent(azureCloudProvider, creds.accountName, creds.credentials, region.name, objectMapper)

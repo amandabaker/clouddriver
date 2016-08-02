@@ -33,7 +33,7 @@ class AzureInfrastructureProvider extends AgentSchedulerAware implements Searcha
   private final Collection<Agent> agents
 
   AzureInfrastructureProvider(AzureCloudProvider azureCloudProvider, Collection<Agent> agents) {
-    this.azureCloudProvider = azureCloudProviderF
+    this.azureCloudProvider = azureCloudProvider
     this.agents = agents
   }
 
