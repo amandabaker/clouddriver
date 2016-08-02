@@ -14,17 +14,21 @@
  * limitations under the License.
  */
 
-package com.netflix.spinnaker.clouddriver.azureContainers
+package com.netflix.spinnaker.clouddriver.azureContainers.resources.common
 
-import com.netflix.spinnaker.clouddriver.core.CloudProvider
-import java.lang.annotation.Annotation
-import org.springframework.stereotype.Component
+import com.netflix.spinnaker.clouddriver.azureContainers.security.AzureCredentials
 
-@Component
-class AzureCloudProvider implements CloudProvider {
-  public static final AZURE = "azure"
-
-  final String id = AZURE
-  final String displayName = "Azure"
-  final Class<Annotation> operationAnnotationType = AzureOperation.class
+class AzureResourceOpsDescription {
+  String name
+  String cloudProvider
+  String accountName
+  String appName
+  String stack
+  String detail
+  AzureCredentials credentials
+  String region
+  String user
+  Long createdTime
+  long lastReadTime
+  Map<String,String> tags = [:]
 }

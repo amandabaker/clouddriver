@@ -14,17 +14,11 @@
  * limitations under the License.
  */
 
-package com.netflix.spinnaker.clouddriver.azureContainers
+package com.netflix.spinnaker.clouddriver.azureContainers.resources.vmimage.model
 
-import com.netflix.spinnaker.clouddriver.core.CloudProvider
-import java.lang.annotation.Annotation
-import org.springframework.stereotype.Component
-
-@Component
-class AzureCloudProvider implements CloudProvider {
-  public static final AZURE = "azure"
-
-  final String id = AZURE
-  final String displayName = "Azure"
-  final Class<Annotation> operationAnnotationType = AzureOperation.class
+class AzureVMImage {
+  String publisher
+  String offer
+  String sku
+  String version
 }
